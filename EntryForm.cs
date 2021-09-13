@@ -11,7 +11,8 @@ namespace PipitGasConversion
         private Settings settings;
         private int DaysInstalled()
         {
-            return Convert.ToInt32((DateTime.Now - settings.InstallDate).TotalDays);
+            int retVal = Convert.ToInt32((DateTime.Now.Date - settings.InstallDate).TotalDays);
+            return retVal;
         }
 
         public EntryForm()
